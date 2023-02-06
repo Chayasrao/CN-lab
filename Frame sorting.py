@@ -16,10 +16,9 @@ n = int(input("Enter the number of frames: "))
 seqList = []
 for i in range(n):
     r = random.randint(1, n*100)
-    if r in seqList:
+    while r in seqList:
         r = random.randint(1, n*100)
-    else:
-        seqList.append(r)
+    seqList.append(r)
 frames = []
 for i in range(n):
     ch = random.choice(seqList)
